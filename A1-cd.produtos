@@ -1,0 +1,39 @@
+def mostrar_menu():
+    print("Menu:")
+    print("1 - Cadastrar produto")
+    print("2 - Consultar produtos")
+    print("0 - Sair")
+
+def consultar_produtos(produtos):
+    nome_busca = input("Digite o nome do produto que deseja consultar: ")
+    encontrado = False
+    i = 0
+    while i < len(produtos):
+        if produtos[i]["nome"] == nome_busca:
+            print(f"Produto encontrado: {produtos[i]['nome']} - R$ {produtos[i]['preco']:.2f}")
+            encontrado = True
+            break
+        i += 1
+    if not encontrado:
+        print("Produto não encontrado.")
+
+continuar = True
+produtos = []
+def cadastrar_produto(produtos):
+    nome = str(input("Digite o nome do produto: "))
+    preco = float(input("Digite o preço do produto: "))
+    produtos.append({"nome": nome, "preco": preco})
+    print(f"Produto {nome} cadastrado com sucesso!")
+while continuar:
+
+    mostrar_menu()
+    opcao = input("Escolha uma opção: ")
+    if opcao == "1":
+        cadastrar_produto(produtos)
+    elif opcao == "2":
+        consultar_produtos(produtos)
+    elif opcao == "0":
+        print("ainda emplementar a função de consulta")
+        continuar = False
+    else:
+        print("Opção inválida.")

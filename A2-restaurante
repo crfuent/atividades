@@ -1,0 +1,68 @@
+n1 = "Pastel"
+n2 = "Lanche"
+n3 = "Bebida"
+#\n é quebra de linha, ou seja, pula uma linha
+opcao = input("escolha uma opção:\n1 - Pastel\n2 - Lanche\n3 - Bebida\n")
+
+if opcao == "1":
+#qo significa question e o sinal de interrogação usado antigamente
+    qo = input("você escolheu pastel. Tradicional ou gourmet? ")
+
+    if qo == "tradicional":
+        sabor = input("queijo ou carne? ")
+
+        if sabor == "queijo":
+            preco = 10
+            print(f"pagar: {preco} reais.")
+
+        elif sabor == "carne":
+            preco = 12
+            print(f"pagar: {preco} reais.")
+
+    elif qo == "gourmet":
+        sabor = input("queijo ou carne? ")
+
+        if sabor == "queijo":
+            preco = 20
+            print(f"pagar: {preco} reais.")
+
+        elif sabor == "carne":
+            preco = 24
+            print(f"pagar: {preco} reais.")
+
+#nao precisou de variavel hahahai
+#n4 = "x-salada"
+#n5 = "x-tudo"
+#n6 = "x-nada"
+if opcao == "2":
+   qo = input("você escolheu lanche. escolha uma opção:\n1 - x-salada\n2 - x-tudo\n3 - x-nada\n")
+
+if qo == "x-salada":
+   preco = 20
+   print(f"pagar: {preco} reais.")
+
+elif qo == "x-tudo":
+     preco = 25
+     print(f"pagar: {preco} reais.")
+
+elif qo == "x-nada":
+    preco = 10
+    print(f"pagar: {preco} reais.")
+
+if opcao == "3":
+   qo = input("você escolheu bebida. escolha uma opção:\n1 - coca-cola\n2 - fanta\n3 - guarana\n")
+    
+if qo == "coca-cola":
+   preco = 5
+   print(f"pagar: {preco} reais.")
+
+elif qo == "fanta":
+     preco = 6
+     print(f"pagar: {preco} reais.")
+
+elif qo == "guarana":
+    preco = 7
+    print(f"pagar: {preco} reais.")
+
+print("obrigada pela preferencia :3")
+#feito ha 2 meses no mycompiler, feito em agosto.
